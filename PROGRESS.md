@@ -15,3 +15,7 @@
   - 本地判卷 21/21 PASS 退出码 0（run-local.txt）；--prove 退出码 1、「反向验证成立」（run-prove.txt，audi.com.ph 本次回 429 被判 botwall，仍被拒）
   - 看截图改了一轮：去掉 logo 懒加载（全页截图时底部三个没出来）、特别扁的字标放宽尺寸、中文大标题加 text-wrap: balance（「达。」单独掉行）、VinFast 中文名改「越南 VinFast」
   - 建议偏离：没做视图过渡（View Transitions），筛选换位改用手写 FLIP 动画——视图过渡快照会把磨砂玻璃拍成死图，动画期间玻璃失真
+- 任务 3 完成：公开仓库 https://github.com/jyb635050-ai/ph-car-brands ，Pages（main 根目录，gh api POST repos/…/pages 带 source[branch]/source[path] 可用）已 built
+  - .gitattributes 设 `* -text`：本机 core.autocrlf=true，原先入库时把 accept.mjs 的 CRLF 转成 LF，库里指纹变成 18cde2aa…；改成按原始字节入库后库内指纹＝98661cc2…
+  - `--url` 线上判卷 15/15 PASS 退出码 0（run-live.txt）；本地重跑 21/21 PASS；accept.mjs SHA256 仍 98661cc2…986700
+- 状态：全部完成
