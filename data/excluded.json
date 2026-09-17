@@ -1,0 +1,164 @@
+[
+  {
+    "id": "abarth",
+    "reason": "菲律宾由 Petromax 代理，只有代理商的多品牌网站 petromaxcars.com；abarth.ph 域名不存在",
+    "tried": [
+      "https://www.abarth.ph/",
+      "https://www.petromaxcars.com/"
+    ]
+  },
+  {
+    "id": "alfa-romeo",
+    "reason": "菲律宾由 Petromax 代理，只有代理商的多品牌网站；alfaromeo.ph 域名不存在，alfaromeo.com.ph 连不上",
+    "tried": [
+      "https://www.alfaromeo.ph/",
+      "https://www.alfaromeo.com.ph/",
+      "https://www.petromaxcars.com/"
+    ]
+  },
+  {
+    "id": "fiat",
+    "reason": "菲律宾由 Petromax 代理，只有代理商的多品牌网站；fiat.ph 域名不存在，fiat.com.ph 连不上",
+    "tried": [
+      "https://www.fiat.ph/",
+      "https://www.fiat.com.ph/",
+      "https://www.petromaxcars.com/"
+    ]
+  },
+  {
+    "id": "aston-martin",
+    "reason": "只有经销商 Aston Martin Manila，没有菲律宾专属官网；AutoDeal 给的经销商域名已不存在",
+    "tried": [
+      "http://manila.astonmartindealers.com/en/",
+      "https://www.astonmartin.com/en/dealers/aston-martin-manila"
+    ]
+  },
+  {
+    "id": "bentley",
+    "reason": "只有 Bentley 全球官网里的 Bentley Manila 经销商页面，按领导裁决经销商页不收",
+    "tried": [
+      "https://www.manila.bentleymotors.com/"
+    ]
+  },
+  {
+    "id": "ferrari",
+    "reason": "只有经销商 Velocita Motors 的页面（manila.ferraridealers.com），按领导裁决经销商页不收",
+    "tried": [
+      "https://philippines.ferraridealers.com/"
+    ]
+  },
+  {
+    "id": "lamborghini",
+    "reason": "只有 Lamborghini 全球官网里的 Lamborghini Manila 经销商页面，按领导裁决不收",
+    "tried": [
+      "https://www.lamborghini.com/en-en/dealerships/lamborghini-manila"
+    ]
+  },
+  {
+    "id": "mclaren",
+    "reason": "只有经销商 McLaren Manila，找不到菲律宾专属官网；猜的域名不存在、全球站经销商页 404",
+    "tried": [
+      "https://www.mclarenmanila.com/",
+      "https://cars.mclaren.com/en/retailers/manila"
+    ]
+  },
+  {
+    "id": "rolls-royce",
+    "reason": "找不到菲律宾专属官网，AutoDeal 给的马尼拉经销商网址已 404",
+    "tried": [
+      "https://www.rolls-roycemotorcars-manila.com.ph/"
+    ]
+  },
+  {
+    "id": "faw",
+    "reason": "菲律宾只卖 FAW 卡车（代理商 Focus Ventures 的 wix 站），纯卡车品牌不收",
+    "tried": [
+      "http://www.focusventures.com.ph/",
+      "https://focusventures.wixsite.com/fawphilippines"
+    ]
+  },
+  {
+    "id": "gaz",
+    "reason": "AutoDeal 给的代理商网址 gazellemotors.com 域名不存在，查不到菲律宾官网",
+    "tried": [
+      "https://gazellemotors.com/",
+      "https://www.gazphilippines.com/"
+    ]
+  },
+  {
+    "id": "haima",
+    "reason": "haima.com.ph 域名已过期（页面写着 domain is expired），查不到其他菲律宾官网",
+    "tried": [
+      "https://www.haima.com.ph/"
+    ]
+  },
+  {
+    "id": "jac",
+    "reason": "jacmotors.ph 对浏览器和 curl 都回 429，另一次实测被跳到垃圾广告站，无法确认是正常官网",
+    "tried": [
+      "https://jacmotors.ph/",
+      "https://www.jacmotors.ph/",
+      "https://www.jacphilippines.com/"
+    ]
+  },
+  {
+    "id": "jetour",
+    "reason": "jetourauto.ph 的 HTTPS 证书是 baic-ph.com 的，访客浏览器会报安全警告打不开；jetour.com.ph 被本机拦为钓鱼站",
+    "tried": [
+      "https://jetourauto.ph/",
+      "http://jetourauto.ph/",
+      "https://jetour.com.ph/",
+      "https://www.jetour.ph/"
+    ]
+  },
+  {
+    "id": "kaicene",
+    "reason": "搜索只见车媒页面，查不到菲律宾官网；猜的 kaicene.ph / kaicene.com.ph 连不上",
+    "tried": [
+      "https://www.kaicene.ph/",
+      "https://www.kaicene.com.ph/"
+    ]
+  },
+  {
+    "id": "leapmotor",
+    "reason": "搜不到零跑进入菲律宾的消息，leapmotor.ph 证书错误，leapmotorphilippines.com 不存在",
+    "tried": [
+      "https://www.leapmotor.ph/",
+      "https://www.leapmotorphilippines.com/"
+    ]
+  },
+  {
+    "id": "mahindra",
+    "reason": "mahindra.com.ph 对浏览器和 curl 都回 429 看不到内容，也找不到第三方页面证明它是官网",
+    "tried": [
+      "https://www.mahindra.com.ph/",
+      "https://www.mahindra.ph/"
+    ]
+  },
+  {
+    "id": "radar",
+    "reason": "只有代理商 UAAGI 的新闻稿，查不到雷达汽车菲律宾官网；radar.ph 是菲律宾新闻网站",
+    "tried": [
+      "https://radar.ph/",
+      "https://www.radarauto.ph/",
+      "https://www.radar-auto.ph/"
+    ]
+  },
+  {
+    "id": "tata",
+    "reason": "philippines.tatamotors.com 域名已不存在，tatamotors.ph 跳到印度全球站并拒绝访问",
+    "tried": [
+      "http://philippines.tatamotors.com/",
+      "https://www.tatamotors.ph/",
+      "https://www.tatamotors.com.ph/"
+    ]
+  },
+  {
+    "id": "voyah",
+    "reason": "只有代理商 Voltion 的多品牌网站（还卖别的电动车），本机也连不上，没有岚图菲律宾专属官网",
+    "tried": [
+      "https://www.voltion.ph/",
+      "https://www.voyah.ph/"
+    ]
+  }
+]

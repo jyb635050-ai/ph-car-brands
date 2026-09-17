@@ -1,0 +1,446 @@
+[
+  {
+    "id": "toyota",
+    "name": "Toyota",
+    "nameZh": "丰田",
+    "region": "jp",
+    "url": "https://www.toyota.com.ph/",
+    "logo": "assets/logos/toyota.svg"
+  },
+  {
+    "id": "lexus",
+    "name": "Lexus",
+    "nameZh": "雷克萨斯",
+    "region": "jp",
+    "url": "https://www.lexus.com.ph/",
+    "logo": "assets/logos/lexus.svg"
+  },
+  {
+    "id": "honda",
+    "name": "Honda",
+    "nameZh": "本田",
+    "region": "jp",
+    "url": "https://www.hondaphil.com/",
+    "logo": "assets/logos/honda.svg"
+  },
+  {
+    "id": "nissan",
+    "name": "Nissan",
+    "nameZh": "日产",
+    "region": "jp",
+    "url": "https://www.nissan.ph/",
+    "logo": "assets/logos/nissan.svg"
+  },
+  {
+    "id": "mitsubishi",
+    "name": "Mitsubishi",
+    "nameZh": "三菱",
+    "region": "jp",
+    "url": "https://www.mitsubishi-motors.com.ph/",
+    "logo": "assets/logos/mitsubishi.svg"
+  },
+  {
+    "id": "suzuki",
+    "name": "Suzuki",
+    "nameZh": "铃木",
+    "region": "jp",
+    "url": "https://auto.suzuki.com.ph/",
+    "logo": "assets/logos/suzuki.svg"
+  },
+  {
+    "id": "mazda",
+    "name": "Mazda",
+    "nameZh": "马自达",
+    "region": "jp",
+    "url": "https://www.mazda.ph/",
+    "logo": "assets/logos/mazda.svg"
+  },
+  {
+    "id": "isuzu",
+    "name": "Isuzu",
+    "nameZh": "五十铃",
+    "region": "jp",
+    "url": "https://www.isuzuphil.com/",
+    "logo": "assets/logos/isuzu.svg"
+  },
+  {
+    "id": "subaru",
+    "name": "Subaru",
+    "nameZh": "斯巴鲁",
+    "region": "jp",
+    "url": "https://www.subaru.asia/ph/en/",
+    "logo": "assets/logos/subaru.svg"
+  },
+  {
+    "id": "hyundai",
+    "name": "Hyundai",
+    "nameZh": "现代",
+    "region": "kr",
+    "url": "https://www.hyundai.com/ph/en",
+    "logo": "assets/logos/hyundai.svg"
+  },
+  {
+    "id": "kia",
+    "name": "Kia",
+    "nameZh": "起亚",
+    "region": "kr",
+    "url": "https://kiaphilippines.com/",
+    "logo": "assets/logos/kia.svg"
+  },
+  {
+    "id": "ford",
+    "name": "Ford",
+    "nameZh": "福特",
+    "region": "us",
+    "url": "https://www.ford.com.ph/",
+    "logo": "assets/logos/ford.svg"
+  },
+  {
+    "id": "chevrolet",
+    "name": "Chevrolet",
+    "nameZh": "雪佛兰",
+    "region": "us",
+    "url": "https://www.chevrolet.com.ph/",
+    "logo": "assets/logos/chevrolet.svg"
+  },
+  {
+    "id": "jeep",
+    "name": "Jeep",
+    "nameZh": "吉普",
+    "region": "us",
+    "url": "https://www.jeep.com.ph/",
+    "logo": "assets/logos/jeep.svg"
+  },
+  {
+    "id": "ram",
+    "name": "RAM",
+    "nameZh": "公羊",
+    "region": "us",
+    "url": "https://www.ram.com/ph/en/",
+    "logo": "assets/logos/ram.svg"
+  },
+  {
+    "id": "dodge",
+    "name": "Dodge",
+    "nameZh": "道奇",
+    "region": "us",
+    "url": "https://www.dodge.com/ph/en/index.html",
+    "logo": "assets/logos/dodge.svg"
+  },
+  {
+    "id": "tesla",
+    "name": "Tesla",
+    "nameZh": "特斯拉",
+    "region": "us",
+    "url": "https://www.tesla.com/en_ph",
+    "logo": "assets/logos/tesla.svg",
+    "offnet": {
+      "why": "botwall",
+      "evidence": "https://www.autodeal.com.ph/brands/tesla-philippines"
+    }
+  },
+  {
+    "id": "bmw",
+    "name": "BMW",
+    "nameZh": "宝马",
+    "region": "eu",
+    "url": "https://www.bmw.com.ph/",
+    "logo": "assets/logos/bmw.svg"
+  },
+  {
+    "id": "mini",
+    "name": "MINI",
+    "nameZh": "迷你",
+    "region": "eu",
+    "url": "https://www.mini.com.ph/",
+    "logo": "assets/logos/mini.svg"
+  },
+  {
+    "id": "mercedes-benz",
+    "name": "Mercedes-Benz",
+    "nameZh": "梅赛德斯-奔驰",
+    "region": "eu",
+    "url": "https://www.mercedes-benz.ph/",
+    "logo": "assets/logos/mercedes-benz.svg"
+  },
+  {
+    "id": "audi",
+    "name": "Audi",
+    "nameZh": "奥迪",
+    "region": "eu",
+    "url": "https://www.audi.ph/",
+    "logo": "assets/logos/audi.svg"
+  },
+  {
+    "id": "porsche",
+    "name": "Porsche",
+    "nameZh": "保时捷",
+    "region": "eu",
+    "url": "https://www.porsche.com/philippines/",
+    "logo": "assets/logos/porsche.svg"
+  },
+  {
+    "id": "volkswagen",
+    "name": "Volkswagen",
+    "nameZh": "大众",
+    "region": "eu",
+    "url": "https://www.volkswagen.com.ph/",
+    "logo": "assets/logos/volkswagen.svg"
+  },
+  {
+    "id": "volvo",
+    "name": "Volvo",
+    "nameZh": "沃尔沃",
+    "region": "eu",
+    "url": "https://www.volvocars.com/ph/",
+    "logo": "assets/logos/volvo.svg"
+  },
+  {
+    "id": "land-rover",
+    "name": "Land Rover",
+    "nameZh": "路虎",
+    "region": "eu",
+    "url": "https://www.landrover.ph/",
+    "logo": "assets/logos/land-rover.svg"
+  },
+  {
+    "id": "jaguar",
+    "name": "Jaguar",
+    "nameZh": "捷豹",
+    "region": "eu",
+    "url": "https://www.jaguar.ph/",
+    "logo": "assets/logos/jaguar.svg"
+  },
+  {
+    "id": "peugeot",
+    "name": "Peugeot",
+    "nameZh": "标致",
+    "region": "eu",
+    "url": "https://www.peugeot.ph/",
+    "logo": "assets/logos/peugeot.svg"
+  },
+  {
+    "id": "maserati",
+    "name": "Maserati",
+    "nameZh": "玛莎拉蒂",
+    "region": "eu",
+    "url": "https://www.maserati.com/ph/en",
+    "logo": "assets/logos/maserati.svg"
+  },
+  {
+    "id": "lotus",
+    "name": "Lotus",
+    "nameZh": "路特斯",
+    "region": "eu",
+    "url": "https://www.lotuscars.com/en-PH",
+    "logo": null
+  },
+  {
+    "id": "byd",
+    "name": "BYD",
+    "nameZh": "比亚迪",
+    "region": "cn",
+    "url": "https://bydcarsphilippines.com/",
+    "logo": "assets/logos/byd.svg"
+  },
+  {
+    "id": "denza",
+    "name": "Denza",
+    "nameZh": "腾势",
+    "region": "cn",
+    "url": "https://www.denza.com/ph",
+    "logo": "assets/logos/denza.webp"
+  },
+  {
+    "id": "geely",
+    "name": "Geely",
+    "nameZh": "吉利",
+    "region": "cn",
+    "url": "https://www.geelyph.com/",
+    "logo": "assets/logos/geely.svg"
+  },
+  {
+    "id": "zeekr",
+    "name": "Zeekr",
+    "nameZh": "极氪",
+    "region": "cn",
+    "url": "https://www.zeekrlife.com/en-ph/",
+    "logo": "assets/logos/zeekr.svg"
+  },
+  {
+    "id": "lynk-co",
+    "name": "Lynk & Co",
+    "nameZh": "领克",
+    "region": "cn",
+    "url": "https://www.lynkco.com/en-ph/",
+    "logo": "assets/logos/lynk-co.svg"
+  },
+  {
+    "id": "chery",
+    "name": "Chery",
+    "nameZh": "奇瑞",
+    "region": "cn",
+    "url": "https://www.cheryauto.ph/",
+    "logo": "assets/logos/chery.svg"
+  },
+  {
+    "id": "omoda-jaecoo",
+    "name": "Omoda & Jaecoo",
+    "nameZh": "欧萌达与捷酷",
+    "region": "cn",
+    "url": "https://www.omodajaecoo.com/ph/",
+    "logo": null,
+    "also": [
+      "omoda",
+      "jaecoo"
+    ]
+  },
+  {
+    "id": "mg",
+    "name": "MG",
+    "nameZh": "名爵",
+    "region": "cn",
+    "url": "https://mgmotor.com.ph/",
+    "logo": "assets/logos/mg.svg"
+  },
+  {
+    "id": "maxus",
+    "name": "Maxus",
+    "nameZh": "上汽大通",
+    "region": "cn",
+    "url": "https://maxus.ph/",
+    "logo": "assets/logos/maxus.svg"
+  },
+  {
+    "id": "changan",
+    "name": "Changan",
+    "nameZh": "长安",
+    "region": "cn",
+    "url": "https://www.changan.ph/",
+    "logo": "assets/logos/changan.svg"
+  },
+  {
+    "id": "deepal",
+    "name": "Deepal",
+    "nameZh": "深蓝",
+    "region": "cn",
+    "url": "https://deepal.com.ph/",
+    "logo": "assets/logos/deepal.svg"
+  },
+  {
+    "id": "hongqi",
+    "name": "Hongqi",
+    "nameZh": "红旗",
+    "region": "cn",
+    "url": "https://www.hongqi.ph/",
+    "logo": "assets/logos/hongqi.png"
+  },
+  {
+    "id": "bestune",
+    "name": "Bestune",
+    "nameZh": "奔腾",
+    "region": "cn",
+    "url": "https://www.bestune.ph/",
+    "logo": null
+  },
+  {
+    "id": "gwm",
+    "name": "GWM",
+    "nameZh": "长城",
+    "region": "cn",
+    "url": "https://www.gwm.com.ph/",
+    "logo": "assets/logos/gwm.svg",
+    "also": [
+      "haval",
+      "tank"
+    ]
+  },
+  {
+    "id": "gac",
+    "name": "GAC",
+    "nameZh": "广汽",
+    "region": "cn",
+    "url": "https://www.gacgroup.com/en-ph",
+    "logo": "assets/logos/gac.png"
+  },
+  {
+    "id": "baic",
+    "name": "BAIC",
+    "nameZh": "北汽",
+    "region": "cn",
+    "url": "https://baic.ph/",
+    "logo": "assets/logos/baic.webp"
+  },
+  {
+    "id": "dongfeng",
+    "name": "Dongfeng",
+    "nameZh": "东风",
+    "region": "cn",
+    "url": "https://dongfengmotorsph.com/",
+    "logo": "assets/logos/dongfeng.svg"
+  },
+  {
+    "id": "dfsk",
+    "name": "DFSK",
+    "nameZh": "东风小康",
+    "region": "cn",
+    "url": "https://www.dfsk.com.ph/",
+    "logo": "assets/logos/dfsk.png"
+  },
+  {
+    "id": "foton",
+    "name": "Foton",
+    "nameZh": "福田",
+    "region": "cn",
+    "url": "https://www.foton.com.ph/",
+    "logo": "assets/logos/foton.svg"
+  },
+  {
+    "id": "jmc",
+    "name": "JMC",
+    "nameZh": "江铃",
+    "region": "cn",
+    "url": "https://jmc.com.ph/",
+    "logo": null
+  },
+  {
+    "id": "kaiyi",
+    "name": "Kaiyi",
+    "nameZh": "凯翼",
+    "region": "cn",
+    "url": "https://kaiyi.com.ph/",
+    "logo": null
+  },
+  {
+    "id": "aito",
+    "name": "AITO",
+    "nameZh": "问界",
+    "region": "cn",
+    "url": "https://www.aito.ph/",
+    "logo": null
+  },
+  {
+    "id": "xpeng",
+    "name": "XPeng",
+    "nameZh": "小鹏",
+    "region": "cn",
+    "url": "https://www.xpeng.com/ph",
+    "logo": "assets/logos/xpeng.svg"
+  },
+  {
+    "id": "li-auto",
+    "name": "Li Auto",
+    "nameZh": "理想",
+    "region": "cn",
+    "url": "https://www.liauto.ph/",
+    "logo": "assets/logos/li-auto.svg"
+  },
+  {
+    "id": "vinfast",
+    "name": "VinFast",
+    "nameZh": "越南 VinFast",
+    "region": "other",
+    "url": "https://vinfastauto.ph/en",
+    "logo": "assets/logos/vinfast.svg"
+  }
+]
