@@ -41,13 +41,6 @@
     ]
   },
   {
-    "id": "ferrari",
-    "reason": "只有经销商 Velocita Motors 的页面（manila.ferraridealers.com），按领导裁决经销商页不收",
-    "tried": [
-      "https://philippines.ferraridealers.com/"
-    ]
-  },
-  {
     "id": "lamborghini",
     "reason": "只有 Lamborghini 全球官网里的 Lamborghini Manila 经销商页面，按领导裁决不收",
     "tried": [
@@ -93,25 +86,6 @@
     ]
   },
   {
-    "id": "jac",
-    "reason": "jacmotors.ph 对浏览器和 curl 都回 429，另一次实测被跳到垃圾广告站，无法确认是正常官网",
-    "tried": [
-      "https://jacmotors.ph/",
-      "https://www.jacmotors.ph/",
-      "https://www.jacphilippines.com/"
-    ]
-  },
-  {
-    "id": "jetour",
-    "reason": "jetourauto.ph 的 HTTPS 证书是 baic-ph.com 的，访客浏览器会报安全警告打不开；jetour.com.ph 被本机拦为钓鱼站",
-    "tried": [
-      "https://jetourauto.ph/",
-      "http://jetourauto.ph/",
-      "https://jetour.com.ph/",
-      "https://www.jetour.ph/"
-    ]
-  },
-  {
     "id": "kaicene",
     "reason": "搜索只见车媒页面，查不到菲律宾官网；猜的 kaicene.ph / kaicene.com.ph 连不上",
     "tried": [
@@ -133,15 +107,6 @@
     "tried": [
       "https://www.mahindra.com.ph/",
       "https://www.mahindra.ph/"
-    ]
-  },
-  {
-    "id": "radar",
-    "reason": "只有代理商 UAAGI 的新闻稿，查不到雷达汽车菲律宾官网；radar.ph 是菲律宾新闻网站",
-    "tried": [
-      "https://radar.ph/",
-      "https://www.radarauto.ph/",
-      "https://www.radar-auto.ph/"
     ]
   },
   {

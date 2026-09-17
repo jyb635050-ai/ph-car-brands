@@ -43,6 +43,7 @@ const brands = [
   B('peugeot', 'Peugeot', '标致', 'eu', 'https://www.peugeot.ph/'),
   B('maserati', 'Maserati', '玛莎拉蒂', 'eu', 'https://www.maserati.com/ph/en'),
   B('lotus', 'Lotus', '路特斯', 'eu', 'https://www.lotuscars.com/en-PH'),
+  B('ferrari', 'Ferrari', '法拉利', 'eu', 'https://www.ferrari.com/en-PH'), // 法拉利官网菲律宾频道（ferrari.com.ph 跳转至此）
   B('byd', 'BYD', '比亚迪', 'cn', 'https://bydcarsphilippines.com/'),
   B('denza', 'Denza', '腾势', 'cn', 'https://www.denza.com/ph'),
   B('geely', 'Geely', '吉利', 'cn', 'https://www.geelyph.com/'),
@@ -57,16 +58,23 @@ const brands = [
   B('hongqi', 'Hongqi', '红旗', 'cn', 'https://www.hongqi.ph/'),
   B('bestune', 'Bestune', '奔腾', 'cn', 'https://www.bestune.ph/'),
   B('gwm', 'GWM', '长城', 'cn', 'https://www.gwm.com.ph/', { also: ['haval', 'tank'] }),
-  B('gac', 'GAC', '广汽', 'cn', 'https://www.gacgroup.com/en-ph'),
+  B('gac', 'GAC', '广汽', 'cn', 'https://www.gacgroup.com/en-ph', { also: ['aion'] }), // 菲律宾站导航里有 AION
   B('baic', 'BAIC', '北汽', 'cn', 'https://baic.ph/'),
-  B('dongfeng', 'Dongfeng', '东风', 'cn', 'https://dongfengmotorsph.com/'),
+  B('dongfeng', 'Dongfeng', '东风', 'cn', 'https://dongfengmotorsph.com/', { also: ['forthing'] }),
   B('dfsk', 'DFSK', '东风小康', 'cn', 'https://www.dfsk.com.ph/'),
   B('foton', 'Foton', '福田', 'cn', 'https://www.foton.com.ph/'),
   B('jmc', 'JMC', '江铃', 'cn', 'https://jmc.com.ph/'),
   B('kaiyi', 'Kaiyi', '凯翼', 'cn', 'https://kaiyi.com.ph/'),
-  B('aito', 'AITO', '问界', 'cn', 'https://www.aito.ph/'),
+  B('aito', 'AITO', '问界', 'cn', 'https://www.aito.ph/', { also: ['seres'] }), // seres.com.ph 直接跳到 aito.ph
   B('xpeng', 'XPeng', '小鹏', 'cn', 'https://www.xpeng.com/ph'),
   B('li-auto', 'Li Auto', '理想', 'cn', 'https://www.liauto.ph/'),
+  // 以下为 2026-09-17 第二轮补漏（车媒目录＋约 800 个域名扫描＋浏览器核实）
+  B('jetour', 'Jetour', '捷途', 'cn', 'https://jetourautophilippines.com/'),
+  B('jac', 'JAC', '江淮', 'cn', 'https://jacmotorsph.com/'), // 关于我们页写明 JAC Automobile International Philippine Inc. 为独家代理
+  B('radar', 'Radar', '雷达', 'cn', 'https://radarauto.ph/'),
+  B('hycan', 'Hycan', '合创', 'cn', 'https://hycan.com.ph/'),
+  B('wuling', 'Wuling', '五菱', 'cn', 'https://wulingph.com/', { also: ['baojun'] }),
+  B('icaur', 'iCAUR', '奇瑞 iCAUR', 'cn', 'https://www.icaurglobal.com/ph/'),
   B('vinfast', 'VinFast', '越南 VinFast', 'other', 'https://vinfastauto.ph/en'),
 ];
 
@@ -77,19 +85,15 @@ const excluded = [
   X('fiat', '菲律宾由 Petromax 代理，只有代理商的多品牌网站；fiat.ph 域名不存在，fiat.com.ph 连不上', ['https://www.fiat.ph/', 'https://www.fiat.com.ph/', 'https://www.petromaxcars.com/']),
   X('aston-martin', '只有经销商 Aston Martin Manila，没有菲律宾专属官网；AutoDeal 给的经销商域名已不存在', ['http://manila.astonmartindealers.com/en/', 'https://www.astonmartin.com/en/dealers/aston-martin-manila']),
   X('bentley', '只有 Bentley 全球官网里的 Bentley Manila 经销商页面，按领导裁决经销商页不收', ['https://www.manila.bentleymotors.com/']),
-  X('ferrari', '只有经销商 Velocita Motors 的页面（manila.ferraridealers.com），按领导裁决经销商页不收', ['https://philippines.ferraridealers.com/']),
   X('lamborghini', '只有 Lamborghini 全球官网里的 Lamborghini Manila 经销商页面，按领导裁决不收', ['https://www.lamborghini.com/en-en/dealerships/lamborghini-manila']),
   X('mclaren', '只有经销商 McLaren Manila，找不到菲律宾专属官网；猜的域名不存在、全球站经销商页 404', ['https://www.mclarenmanila.com/', 'https://cars.mclaren.com/en/retailers/manila']),
   X('rolls-royce', '找不到菲律宾专属官网，AutoDeal 给的马尼拉经销商网址已 404', ['https://www.rolls-roycemotorcars-manila.com.ph/']),
   X('faw', '菲律宾只卖 FAW 卡车（代理商 Focus Ventures 的 wix 站），纯卡车品牌不收', ['http://www.focusventures.com.ph/', 'https://focusventures.wixsite.com/fawphilippines']),
   X('gaz', 'AutoDeal 给的代理商网址 gazellemotors.com 域名不存在，查不到菲律宾官网', ['https://gazellemotors.com/', 'https://www.gazphilippines.com/']),
   X('haima', 'haima.com.ph 域名已过期（页面写着 domain is expired），查不到其他菲律宾官网', ['https://www.haima.com.ph/']),
-  X('jac', 'jacmotors.ph 对浏览器和 curl 都回 429，另一次实测被跳到垃圾广告站，无法确认是正常官网', ['https://jacmotors.ph/', 'https://www.jacmotors.ph/', 'https://www.jacphilippines.com/']),
-  X('jetour', 'jetourauto.ph 的 HTTPS 证书是 baic-ph.com 的，访客浏览器会报安全警告打不开；jetour.com.ph 被本机拦为钓鱼站', ['https://jetourauto.ph/', 'http://jetourauto.ph/', 'https://jetour.com.ph/', 'https://www.jetour.ph/']),
   X('kaicene', '搜索只见车媒页面，查不到菲律宾官网；猜的 kaicene.ph / kaicene.com.ph 连不上', ['https://www.kaicene.ph/', 'https://www.kaicene.com.ph/']),
   X('leapmotor', '搜不到零跑进入菲律宾的消息，leapmotor.ph 证书错误，leapmotorphilippines.com 不存在', ['https://www.leapmotor.ph/', 'https://www.leapmotorphilippines.com/']),
   X('mahindra', 'mahindra.com.ph 对浏览器和 curl 都回 429 看不到内容，也找不到第三方页面证明它是官网', ['https://www.mahindra.com.ph/', 'https://www.mahindra.ph/']),
-  X('radar', '只有代理商 UAAGI 的新闻稿，查不到雷达汽车菲律宾官网；radar.ph 是菲律宾新闻网站', ['https://radar.ph/', 'https://www.radarauto.ph/', 'https://www.radar-auto.ph/']),
   X('tata', 'philippines.tatamotors.com 域名已不存在，tatamotors.ph 跳到印度全球站并拒绝访问', ['http://philippines.tatamotors.com/', 'https://www.tatamotors.ph/', 'https://www.tatamotors.com.ph/']),
   X('voyah', '只有代理商 Voltion 的多品牌网站（还卖别的电动车），本机也连不上，没有岚图菲律宾专属官网', ['https://www.voltion.ph/', 'https://www.voyah.ph/']),
 ];

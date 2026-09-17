@@ -236,6 +236,14 @@
     "logo": null
   },
   {
+    "id": "ferrari",
+    "name": "Ferrari",
+    "nameZh": "法拉利",
+    "region": "eu",
+    "url": "https://www.ferrari.com/en-PH",
+    "logo": "assets/logos/ferrari.svg"
+  },
+  {
     "id": "byd",
     "name": "BYD",
     "nameZh": "比亚迪",
@@ -361,7 +369,10 @@
     "nameZh": "广汽",
     "region": "cn",
     "url": "https://www.gacgroup.com/en-ph",
-    "logo": "assets/logos/gac.png"
+    "logo": "assets/logos/gac.png",
+    "also": [
+      "aion"
+    ]
   },
   {
     "id": "baic",
@@ -377,7 +388,10 @@
     "nameZh": "东风",
     "region": "cn",
     "url": "https://dongfengmotorsph.com/",
-    "logo": "assets/logos/dongfeng.svg"
+    "logo": "assets/logos/dongfeng.svg",
+    "also": [
+      "forthing"
+    ]
   },
   {
     "id": "dfsk",
@@ -417,7 +431,10 @@
     "nameZh": "问界",
     "region": "cn",
     "url": "https://www.aito.ph/",
-    "logo": null
+    "logo": null,
+    "also": [
+      "seres"
+    ]
   },
   {
     "id": "xpeng",
@@ -434,6 +451,57 @@
     "region": "cn",
     "url": "https://www.liauto.ph/",
     "logo": "assets/logos/li-auto.svg"
+  },
+  {
+    "id": "jetour",
+    "name": "Jetour",
+    "nameZh": "捷途",
+    "region": "cn",
+    "url": "https://jetourautophilippines.com/",
+    "logo": "assets/logos/jetour.svg"
+  },
+  {
+    "id": "jac",
+    "name": "JAC",
+    "nameZh": "江淮",
+    "region": "cn",
+    "url": "https://jacmotorsph.com/",
+    "logo": "assets/logos/jac.png"
+  },
+  {
+    "id": "radar",
+    "name": "Radar",
+    "nameZh": "雷达",
+    "region": "cn",
+    "url": "https://radarauto.ph/",
+    "logo": "assets/logos/radar.png"
+  },
+  {
+    "id": "hycan",
+    "name": "Hycan",
+    "nameZh": "合创",
+    "region": "cn",
+    "url": "https://hycan.com.ph/",
+    "logo": "assets/logos/hycan.png"
+  },
+  {
+    "id": "wuling",
+    "name": "Wuling",
+    "nameZh": "五菱",
+    "region": "cn",
+    "url": "https://wulingph.com/",
+    "logo": "assets/logos/wuling.svg",
+    "also": [
+      "baojun"
+    ]
+  },
+  {
+    "id": "icaur",
+    "name": "iCAUR",
+    "nameZh": "奇瑞 iCAUR",
+    "region": "cn",
+    "url": "https://www.icaurglobal.com/ph/",
+    "logo": "assets/logos/icaur.svg"
   },
   {
     "id": "vinfast",

@@ -30,7 +30,7 @@
       incl: '含',
     },
   };
-  const ALSO = { haval: 'Haval', tank: 'Tank', omoda: 'Omoda', jaecoo: 'Jaecoo' };
+  const ALSO = { haval: 'Haval', tank: 'Tank', omoda: 'Omoda', jaecoo: 'Jaecoo', seres: 'Seres', aion: 'Aion', forthing: 'Forthing', baojun: 'Baojun' };
 
   const $ = (s, el = document) => el.querySelector(s);
   const grid = $('#grid');
