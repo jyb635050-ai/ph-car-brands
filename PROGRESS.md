@@ -25,3 +25,4 @@
 - 新收 7 个：Jetour（jetourautophilippines.com）、Radar（radarauto.ph，上轮误判无官网）、JAC（jacmotorsph.com，关于页写明独家代理）、Hycan 合创、Wuling 五菱（wulingph.com）、iCAUR（icaurglobal.com/ph）、Ferrari（ferrari.com/en-PH 官网菲律宾频道）。子品牌并入：Seres→AITO、Aion→GAC、Forthing→东风、Baojun→五菱
 - 查过但没收：KG Mobility（kg-mobility.ph）和 ROX（roxmotor.com.ph）本机被公司网络拦、外部抓取也 429/拒连，找不到写明网址的第三方页面；Xiaomi Cars Philippines 是非官方资讯/代购站；212、Avatr、Neta、Lepas 尚无菲律宾官网；forthing.ph 建设中；dfsk.ph、seres.ph 是 GoDaddy 停放页；kg/mahindra/tata 等 .ph 常见「Loading…/429」页与停放页同一模式
 - 判卷：本地 21/21（61 个品牌，PASS=60 OFFNET=1；第一次跑 Chevrolet 偶发 SSL 错误，curl 3/3 正常后重跑通过）；--prove 退出码 1；指纹未变
+- 2026-09-18 手机适配加强（领导问起）：实测 6 种尺寸（375/393/430/360/横屏 852/iPad 820）确认两列、无横向滚动、61 个方块齐；据此改了三处——手机首屏大标题压缩（原来要滑一屏才见方块）、触控设备按钮加高到 42–48px（原 34/36px）、地区筛选条右侧加渐隐提示可横滑。本地判卷 21/21
