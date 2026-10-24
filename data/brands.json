@@ -212,14 +212,6 @@
     "logo": "assets/logos/jaguar.svg"
   },
   {
-    "id": "peugeot",
-    "name": "Peugeot",
-    "nameZh": "标致",
-    "region": "eu",
-    "url": "https://www.peugeot.ph/",
-    "logo": "assets/logos/peugeot.svg"
-  },
-  {
     "id": "maserati",
     "name": "Maserati",
     "nameZh": "玛莎拉蒂",
@@ -445,14 +437,6 @@
     "logo": "assets/logos/xpeng.svg"
   },
   {
-    "id": "li-auto",
-    "name": "Li Auto",
-    "nameZh": "理想",
-    "region": "cn",
-    "url": "https://www.liauto.ph/",
-    "logo": "assets/logos/li-auto.svg"
-  },
-  {
     "id": "jetour",
     "name": "Jetour",
     "nameZh": "捷途",
@@ -470,11 +454,11 @@
   },
   {
     "id": "radar",
-    "name": "Radar",
-    "nameZh": "雷达",
+    "name": "Riddara",
+    "nameZh": "雷达 Radar",
     "region": "cn",
-    "url": "https://radarauto.ph/",
-    "logo": "assets/logos/radar.png"
+    "url": "https://www.riddara.com/ph",
+    "logo": "assets/logos/riddara.svg"
   },
   {
     "id": "hycan",
@@ -502,6 +486,22 @@
     "region": "cn",
     "url": "https://www.icaurglobal.com/ph/",
     "logo": "assets/logos/icaur.svg"
+  },
+  {
+    "id": "jetour-gaia",
+    "name": "Jetour GAIA",
+    "nameZh": "捷途 GAIA",
+    "region": "cn",
+    "url": "https://www.jetourgaia.ph/",
+    "logo": "assets/logos/jetour-gaia.png"
+  },
+  {
+    "id": "avatr",
+    "name": "AVATR",
+    "nameZh": "阿维塔",
+    "region": "cn",
+    "url": "https://avatrph.com/",
+    "logo": "assets/logos/avatr.svg"
   },
   {
     "id": "vinfast",

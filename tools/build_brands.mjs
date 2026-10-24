@@ -40,7 +40,6 @@ const brands = [
   B('volvo', 'Volvo', '沃尔沃', 'eu', 'https://www.volvocars.com/ph/'),
   B('land-rover', 'Land Rover', '路虎', 'eu', 'https://www.landrover.ph/'),
   B('jaguar', 'Jaguar', '捷豹', 'eu', 'https://www.jaguar.ph/'),
-  B('peugeot', 'Peugeot', '标致', 'eu', 'https://www.peugeot.ph/'),
   B('maserati', 'Maserati', '玛莎拉蒂', 'eu', 'https://www.maserati.com/ph/en'),
   B('lotus', 'Lotus', '路特斯', 'eu', 'https://www.lotuscars.com/en-PH'),
   B('ferrari', 'Ferrari', '法拉利', 'eu', 'https://www.ferrari.com/en-PH'), // 法拉利官网菲律宾频道（ferrari.com.ph 跳转至此）
@@ -67,19 +66,24 @@ const brands = [
   B('kaiyi', 'Kaiyi', '凯翼', 'cn', 'https://kaiyi.com.ph/'),
   B('aito', 'AITO', '问界', 'cn', 'https://www.aito.ph/', { also: ['seres'] }), // seres.com.ph 直接跳到 aito.ph
   B('xpeng', 'XPeng', '小鹏', 'cn', 'https://www.xpeng.com/ph'),
-  B('li-auto', 'Li Auto', '理想', 'cn', 'https://www.liauto.ph/'),
   // 以下为 2026-09-17 第二轮补漏（车媒目录＋约 800 个域名扫描＋浏览器核实）
   B('jetour', 'Jetour', '捷途', 'cn', 'https://jetourautophilippines.com/'),
   B('jac', 'JAC', '江淮', 'cn', 'https://jacmotorsph.com/'), // 关于我们页写明 JAC Automobile International Philippine Inc. 为独家代理
-  B('radar', 'Radar', '雷达', 'cn', 'https://radarauto.ph/'),
+  // Radar 于 2026-10 由代理 UAAGI 更名 Riddara（radarauto.ph 只剩一行公司名）；改链厂家的菲律宾频道。id 沿用候选表的 radar
+  { ...B('radar', 'Riddara', '雷达 Radar', 'cn', 'https://www.riddara.com/ph'), logo: 'assets/logos/riddara.svg' },
   B('hycan', 'Hycan', '合创', 'cn', 'https://hycan.com.ph/'),
   B('wuling', 'Wuling', '五菱', 'cn', 'https://wulingph.com/', { also: ['baojun'] }),
   B('icaur', 'iCAUR', '奇瑞 iCAUR', 'cn', 'https://www.icaurglobal.com/ph/'),
+  // 以下为 2026-10-24 第三轮（新入驻排查）
+  B('jetour-gaia', 'Jetour GAIA', '捷途 GAIA', 'cn', 'https://www.jetourgaia.ph/'), // 捷途高端子品牌，MIAS 2026 发布，EDSA/BGC 有独立展厅；独立 .ph 站
+  B('avatr', 'AVATR', '阿维塔', 'cn', 'https://avatrph.com/'), // 页脚版权：AVATR Technology (Chongqing)；代理 Auto iCON，尚在预热（Notify me）
   B('vinfast', 'VinFast', '越南 VinFast', 'other', 'https://vinfastauto.ph/en'),
 ];
 
 const X = (id, reason, tried) => ({ id, reason, tried });
 const excluded = [
+  X('peugeot', '2026-10-24 复查：peugeot.ph 全站（含 /index.html）跳到法国全球站 peugeot.com/en，原菲律宾站已下线（9-17 还正常）；代理 Astara 仍在卖车，待其菲律宾站恢复再收', ['https://www.peugeot.ph/', 'https://www.peugeot.com.ph/', 'https://www.peugeot.com/ph/', 'https://www.peugeot.com/en-ph/']),
+  X('li-auto', '2026-10-24 复查：liauto.ph 整站 404（首页、车型页、展厅页都是 Not Found；9-17 还正常），li-auto.ph 等是停放页；代理 HomeAuto 仍在卖车，待其官网恢复再收', ['https://www.liauto.ph/', 'https://liauto.ph/showrooms', 'https://li-auto.ph/', 'https://www.lixiang.com/en/ph']),
   X('abarth', '菲律宾由 Petromax 代理，只有代理商的多品牌网站 petromaxcars.com；abarth.ph 域名不存在', ['https://www.abarth.ph/', 'https://www.petromaxcars.com/']),
   X('alfa-romeo', '菲律宾由 Petromax 代理，只有代理商的多品牌网站；alfaromeo.ph 域名不存在，alfaromeo.com.ph 连不上', ['https://www.alfaromeo.ph/', 'https://www.alfaromeo.com.ph/', 'https://www.petromaxcars.com/']),
   X('fiat', '菲律宾由 Petromax 代理，只有代理商的多品牌网站；fiat.ph 域名不存在，fiat.com.ph 连不上', ['https://www.fiat.ph/', 'https://www.fiat.com.ph/', 'https://www.petromaxcars.com/']),

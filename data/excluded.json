@@ -1,5 +1,25 @@
 [
   {
+    "id": "peugeot",
+    "reason": "2026-10-24 复查：peugeot.ph 全站（含 /index.html）跳到法国全球站 peugeot.com/en，原菲律宾站已下线（9-17 还正常）；代理 Astara 仍在卖车，待其菲律宾站恢复再收",
+    "tried": [
+      "https://www.peugeot.ph/",
+      "https://www.peugeot.com.ph/",
+      "https://www.peugeot.com/ph/",
+      "https://www.peugeot.com/en-ph/"
+    ]
+  },
+  {
+    "id": "li-auto",
+    "reason": "2026-10-24 复查：liauto.ph 整站 404（首页、车型页、展厅页都是 Not Found；9-17 还正常），li-auto.ph 等是停放页；代理 HomeAuto 仍在卖车，待其官网恢复再收",
+    "tried": [
+      "https://www.liauto.ph/",
+      "https://liauto.ph/showrooms",
+      "https://li-auto.ph/",
+      "https://www.lixiang.com/en/ph"
+    ]
+  },
+  {
     "id": "abarth",
     "reason": "菲律宾由 Petromax 代理，只有代理商的多品牌网站 petromaxcars.com；abarth.ph 域名不存在",
     "tried": [

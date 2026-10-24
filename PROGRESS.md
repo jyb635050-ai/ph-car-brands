@@ -26,3 +26,9 @@
 - 查过但没收：KG Mobility（kg-mobility.ph）和 ROX（roxmotor.com.ph）本机被公司网络拦、外部抓取也 429/拒连，找不到写明网址的第三方页面；Xiaomi Cars Philippines 是非官方资讯/代购站；212、Avatr、Neta、Lepas 尚无菲律宾官网；forthing.ph 建设中；dfsk.ph、seres.ph 是 GoDaddy 停放页；kg/mahindra/tata 等 .ph 常见「Loading…/429」页与停放页同一模式
 - 判卷：本地 21/21（61 个品牌，PASS=60 OFFNET=1；第一次跑 Chevrolet 偶发 SSL 错误，curl 3/3 正常后重跑通过）；--prove 退出码 1；指纹未变
 - 2026-09-18 手机适配加强（领导问起）：实测 6 种尺寸（375/393/430/360/横屏 852/iPad 820）确认两列、无横向滚动、61 个方块齐；据此改了三处——手机首屏大标题压缩（原来要滑一屏才见方块）、触控设备按钮加高到 42–48px（原 34/36px）、地区筛选条右侧加渐隐提示可横滑。本地判卷 21/21
+
+## 2026-10-24 深浅色切换 ＋ 第三轮复查
+- 新功能：顶栏加太阳/月亮按钮手动切换深浅色。没手动选过就跟随系统（系统切换时实时跟着变）；选过就记住（localStorage）。<head> 内联脚本在样式生效前定好主题，刷新不闪；切换时以按钮为圆心扩散过渡（不支持视图过渡的浏览器退化为颜色渐变，减少动态效果设置下直接切）。CSS 由「媒体查询」改为 `:root[data-theme=dark]` 单一来源。实测：浅色/深色系统初值正确、点击切换、刷新保持、中英文提示文字、手机无横向滚动、零报错
+- 新入驻排查：FAWCAR Joyee（10-22 上市，代理 Multifortune Motors）暂无官网（fawcar.ph 是 GoDaddy 停放页）→ 未收；新收 AVATR 阿维塔（avatrph.com，页脚版权 AVATR Technology (Chongqing)，预热中）、Jetour GAIA 捷途高端子品牌（jetourgaia.ph，页面没写运营公司，内容与官方发布一致）
+- 复查发现 3 处失效：Radar 已由 UAAGI 更名 Riddara（radarauto.ph 只剩一行公司名）→ 改链 riddara.com/ph、换新 logo、中文名「雷达 Radar」保证搜旧名能搜到；Peugeot 菲律宾站整站跳法国全球站、Li Auto liauto.ph 整站 404 → 移入 excluded 写明日期与原因；kg-mobility.ph 现跳到 geekbuying 购物站（被劫持/停放），当初没收是对的
+- 现 61 个品牌（日9 韩2 美6 欧12 中31 其他1）。本地判卷 21/21（PASS=60 OFFNET=1）；--prove 退出码 1；指纹未变

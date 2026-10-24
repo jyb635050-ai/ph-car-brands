@@ -16,8 +16,8 @@
   --ease: cubic-bezier(.2, .8, .2, 1);
   color-scheme: light;
 }
-@media (prefers-color-scheme: dark) {
-  :root {
+/* 深色：由 <head> 里的脚本按「用户选择 → 系统设置」写 data-theme */
+:root[data-theme="dark"] {
     --bg: #07080d;
     --ink: #f4f5f8;
     --ink-2: rgba(244, 245, 248, .66);
@@ -32,7 +32,6 @@
     --b1: #2b3f9e; --b2: #6b2a6a; --b3: #145a55; --b4: #6a4a17;
     --logo-filter: grayscale(1) invert(1) brightness(1.6) contrast(.9);
     color-scheme: dark;
-  }
 }
 
 * { box-sizing: border-box; }
@@ -89,6 +88,32 @@ button, input { font: inherit; color: inherit; }
 .lang:hover { transform: scale(1.04); }
 .lang:active { transform: scale(.97); }
 .lang-off, .lang-sep { color: var(--ink-3); }
+.bar-actions { display: flex; align-items: center; gap: 8px; }
+
+/* 深浅色切换：太阳/月亮图标，切换时旋转换位 */
+.theme {
+  position: relative; width: 36px; height: 36px; padding: 0; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--stroke-2); background: var(--glass-hi); color: var(--ink);
+  display: grid; place-items: center; overflow: hidden;
+  transition: transform .25s var(--ease), background .25s;
+}
+.theme:hover { transform: scale(1.06); }
+.theme:active { transform: scale(.94); }
+.theme:focus-visible, .lang:focus-visible { outline: none; box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 45%, transparent); }
+.theme svg { position: absolute; transition: transform .55s var(--ease), opacity .35s var(--ease); }
+.theme .sun { transform: rotate(0) scale(1); opacity: 1; }
+.theme .moon { transform: rotate(-90deg) scale(.4); opacity: 0; }
+[data-theme="dark"] .theme .sun { transform: rotate(90deg) scale(.4); opacity: 0; }
+[data-theme="dark"] .theme .moon { transform: rotate(0) scale(1); opacity: 1; }
+
+/* 切换主题时整页颜色平滑过渡（只在切换那一刻开启，平时不拖累性能） */
+html.theming, html.theming *, html.theming *::before, html.theming *::after {
+  transition: background-color .45s var(--ease), color .45s var(--ease), border-color .45s var(--ease),
+              box-shadow .45s var(--ease), fill .45s var(--ease), filter .45s var(--ease) !important;
+}
+::view-transition-old(root), ::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+::view-transition-new(root) { animation: theme-reveal .6s cubic-bezier(.2, .8, .2, 1); }
+@keyframes theme-reveal { from { clip-path: circle(0 at var(--tx, 100%) var(--ty, 0)); } to { clip-path: circle(var(--tr, 150vmax) at var(--tx, 100%) var(--ty, 0)); } }
 
 /* ── 标题 ── */
 main { max-width: 1200px; margin: 0 auto; padding: 0 16px 40px; }
@@ -177,7 +202,7 @@ html[lang="zh-CN"] .hero h1 { letter-spacing: -.01em; max-width: 13em; }
   background: linear-gradient(180deg, rgba(255, 255, 255, .5), transparent 34%);
   opacity: .5; mix-blend-mode: soft-light;
 }
-@media (prefers-color-scheme: dark) { .tile::before { background: radial-gradient(420px circle at var(--mx) var(--my), rgba(255, 255, 255, .14), transparent 42%); } }
+[data-theme="dark"] .tile::before { background: radial-gradient(420px circle at var(--mx) var(--my), rgba(255, 255, 255, .14), transparent 42%); }
 .tile:hover { background: var(--glass-hi); box-shadow: var(--shadow-hover); transform: perspective(700px) rotateX(var(--rx)) rotateY(var(--ry)) translateY(-4px); }
 .tile:hover::before { opacity: 1; }
 .tile:active { transform: perspective(700px) scale(.975); transition-duration: .15s; }
@@ -194,7 +219,7 @@ html[lang="zh-CN"] .hero h1 { letter-spacing: -.01em; max-width: 13em; }
 }
 .tile .logo img.wide { max-width: 90%; max-height: 40px; }
 .tile:hover .logo img, .tile:focus-visible .logo img { filter: none; transform: scale(1.06); }
-@media (prefers-color-scheme: dark) { .tile:hover .logo img { filter: drop-shadow(0 0 1px rgba(255,255,255,.9)) drop-shadow(0 0 10px rgba(255,255,255,.25)); } }
+[data-theme="dark"] .tile:hover .logo img { filter: drop-shadow(0 0 1px rgba(255,255,255,.9)) drop-shadow(0 0 10px rgba(255,255,255,.25)); }
 .wordmark {
   font-weight: 700; letter-spacing: .04em; text-transform: uppercase; text-align: center;
   font-size: clamp(17px, 2.1vw, 22px); line-height: 1.1; color: var(--ink);
@@ -228,6 +253,7 @@ html[lang="zh-CN"] .hero h1 { letter-spacing: -.01em; max-width: 13em; }
   .seg { height: 42px; padding: 0 15px; font-size: 14.5px; }
   .seg-glider { height: 42px; }
   .lang { height: 42px; padding: 0 16px; }
+  .theme { width: 42px; height: 42px; }
   .search { height: 48px; }
 }
 

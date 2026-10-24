@@ -10,11 +10,13 @@
       search: 'Search brands',
       empty: 'No brand matches your search.',
       count: n => `${n} ${n === 1 ? 'brand' : 'brands'}`,
-      foot1: 'Links checked by opening each site on 17 Sep 2026. Only brands with their own Philippine website are listed — no dealer pages.',
+      foot1: 'Links checked by opening each site on 24 Oct 2026. Only brands with their own Philippine website are listed — no dealer pages.',
       foot2: 'Logos and names are trademarks of their respective owners. This is an independent directory.',
       regions: { all: 'All', jp: 'Japan', kr: 'Korea', us: 'USA', eu: 'Europe', cn: 'China', other: 'Others' },
       open: name => `Open ${name} Philippines official website (new tab)`,
       incl: 'incl.',
+      toDark: 'Switch to dark mode',
+      toLight: 'Switch to light mode',
     },
     zh: {
       app: '菲律宾汽车品牌',
@@ -23,11 +25,13 @@
       search: '搜索品牌',
       empty: '没有找到匹配的品牌。',
       count: n => `共 ${n} 个品牌`,
-      foot1: '所有链接已于 2026 年 9 月 17 日逐个打开核实。只收品牌自己的菲律宾官网，不收经销商页面。',
+      foot1: '所有链接已于 2026 年 10 月 24 日逐个打开核实。只收品牌自己的菲律宾官网，不收经销商页面。',
       foot2: '品牌名称与标志归各自所有者。本站为独立整理的导航页。',
       regions: { all: '全部', jp: '日系', kr: '韩系', us: '美系', eu: '欧系', cn: '中国品牌', other: '其他' },
       open: name => `在新标签页打开 ${name} 菲律宾官网`,
       incl: '含',
+      toDark: '切换到深色模式',
+      toLight: '切换到浅色模式',
     },
   };
   const ALSO = { haval: 'Haval', tank: 'Tank', omoda: 'Omoda', jaecoo: 'Jaecoo', seres: 'Seres', aion: 'Aion', forthing: 'Forthing', baojun: 'Baojun' };
@@ -93,6 +97,7 @@
     lb.querySelector('.lang-on').textContent = lang === 'zh' ? '中文' : 'EN';
     lb.querySelector('.lang-off').textContent = lang === 'zh' ? 'EN' : '中文';
     lb.setAttribute('aria-label', lang === 'zh' ? 'Switch to English' : '切换到中文');
+    labelTheme();
     segs.querySelectorAll('.seg').forEach(s => { s.querySelector('.l').textContent = t.regions[s.dataset.r]; });
     grid.querySelectorAll('.tile').forEach(a => {
       const b = byId.get(a.dataset.id);
@@ -174,6 +179,51 @@
     lang = lang === 'en' ? 'zh' : 'en';
     try { localStorage.setItem('phcb-lang', lang); } catch { /* ignore */ }
     applyLang();
+  });
+
+  // 深浅色：<head> 脚本已按「手动选择 → 系统设置」定好初值；点按钮切换并记住，没手动选过就继续跟随系统
+  const root = document.documentElement;
+  const themeBtn = $('[data-testid=theme]');
+  const themeMeta = $('meta[name=theme-color]');
+  const sysDark = matchMedia('(prefers-color-scheme: dark)');
+  const curTheme = () => root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+  function labelTheme() {
+    const t = T[lang];
+    themeBtn.setAttribute('aria-label', curTheme() === 'dark' ? t.toLight : t.toDark);
+    themeBtn.title = themeBtn.getAttribute('aria-label');
+    themeBtn.setAttribute('aria-pressed', String(curTheme() === 'dark'));
+  }
+  function setTheme(next, origin) {
+    if (next === curTheme()) return;
+    const apply = () => {
+      root.setAttribute('data-theme', next);
+      themeMeta.setAttribute('content', next === 'dark' ? '#07080d' : '#eef1f7');
+      labelTheme();
+    };
+    if (reduce.matches) { apply(); return; }
+    if (document.startViewTransition && origin) {
+      // 以按钮为圆心向外扩散的切换动画
+      const r = origin.getBoundingClientRect();
+      const x = r.left + r.width / 2, y = r.top + r.height / 2;
+      root.style.setProperty('--tx', x + 'px');
+      root.style.setProperty('--ty', y + 'px');
+      root.style.setProperty('--tr', Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y)) + 'px');
+      document.startViewTransition(apply);
+    } else {
+      root.classList.add('theming');
+      apply();
+      setTimeout(() => root.classList.remove('theming'), 500);
+    }
+  }
+  themeBtn.addEventListener('click', () => {
+    const next = curTheme() === 'dark' ? 'light' : 'dark';
+    try { localStorage.setItem('phcb-theme', next); } catch { /* ignore */ }
+    setTheme(next, themeBtn);
+  });
+  sysDark.addEventListener('change', e => {
+    let chosen = null;
+    try { chosen = localStorage.getItem('phcb-theme'); } catch { /* ignore */ }
+    if (!chosen) setTheme(e.matches ? 'dark' : 'light', null);
   });
 
   // 指针倾斜 + 高光（只在有鼠标的设备上）
